@@ -6,7 +6,7 @@
 
 const NEWS_ITEMS = [
   {
-    title:    "Our latest published research",
+    title:    "New Research: Bioactive Compounds from Blue-Green Microalgae",
     date:     "Apr 2026",
     url:      "https://www.linkedin.com/feed/update/urn:li:activity:7446537195936526336",
     img:      "brand_assets/Content/footage/News/Our%20latest%20published%20research.png",
@@ -17,6 +17,13 @@ const NEWS_ITEMS = [
     date:     "Mar 2026",
     url:      "https://www.linkedin.com/feed/update/urn:li:activity:7444388279535329280",
     img:      "brand_assets/Content/footage/News/Our%20First%20Screen%20prints.png",
+    imgStyle: ""
+  },
+  {
+    title:    "New Research: Efficient Cyanobacteria Cultivation",
+    date:     "Feb 2026",
+    url:      "https://pubs.rsc.org/en/content/articlepdf/2026/ra/d5ra09945e",
+    img:      "brand_assets/Content/footage/News/Efficient_cyanobacteria_cultivation.png",
     imgStyle: ""
   },
   {
@@ -32,6 +39,13 @@ const NEWS_ITEMS = [
     url:      "https://www.linkedin.com/posts/brilliant-dyes_enterprisefellowships-academicfounders-universityspinouts-activity-7417962735935733760-04Lm",
     img:      "brand_assets/Content/footage/News/RAE%20Enterprise%20Fellowship.png",
     imgStyle: "object-position: top;"
+  },
+  {
+    title:    "New Research: Flat-plate photobioreactors for renewable resources production",
+    date:     "Oct 2025",
+    url:      "https://www.sciencedirect.com/science/chapter/edited-volume/abs/pii/B9780443140587000191",
+    img:      "brand_assets/Content/footage/News/Algal_bioreactors.jpg",
+    imgStyle: ""
   },
   {
     title:    "Global Change Award 2025",
