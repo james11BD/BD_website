@@ -77,11 +77,30 @@
       align-items: center;
     }
 
-    .nav-logo img {
+    .nav-logo-wrap {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .nav-logo-mono {
+      display: block;
       height: 44px;
       width: auto;
-      filter: invert(12%) sepia(99%) saturate(4000%) hue-rotate(228deg) brightness(78%) contrast(115%);
     }
+
+    .nav-logo-colour {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      opacity: 0;
+    }
+
+    .nav-logo-wrap:hover .nav-logo-mono { opacity: 0; }
+    .nav-logo-wrap:hover .nav-logo-colour { opacity: 1; }
 
     .nav-links {
       display: flex;
@@ -91,7 +110,7 @@
     }
 
     .nav-links a {
-      color: var(--blue);
+      color: #2D2D2A;
       font-size: 15px;
       font-weight: 500;
       transition: opacity 0.2s;
@@ -116,7 +135,7 @@
 
     .hero-text h1 {
       font-size: 76px;
-      color: var(--blue);
+      color: #2D2D2A;
       line-height: 1.05;
       letter-spacing: -0.03em;
       margin-bottom: 28px;
@@ -124,7 +143,7 @@
 
     .hero-text p {
       font-size: 19px;
-      color: var(--blue);
+      color: #2D2D2A;
       font-weight: 400;
       line-height: 1.65;
       max-width: 420px;
@@ -179,7 +198,7 @@
 
     .logos-bar {
       background: var(--cream);
-      padding: 24px 0;
+      padding: 34px 0;
       border-top: 1px solid rgba(0, 14, 170, 0.08);
       border-bottom: 1px solid rgba(0, 14, 170, 0.08);
       overflow: hidden;
@@ -188,14 +207,14 @@
     .logos-track {
       display: flex;
       align-items: center;
-      gap: 64px;
+      gap: 90px;
       width: max-content;
-      animation: logos-scroll 28s linear infinite;
+      animation: logos-scroll 38s linear infinite;
     }
 
     .logos-track img {
-      height: 44px;
-      max-width: 140px;
+      height: 62px;
+      max-width: 196px;
       object-fit: contain;
       filter: grayscale(100%) brightness(0);
       flex-shrink: 0;
@@ -824,7 +843,10 @@
   <!-- SECTION 1: NAVBAR -->
   <nav>
     <div class="nav-logo">
-      <img src="brand_assets/Logo.svg" alt="brilliant dyes">
+      <a href="/" class="nav-logo-wrap">
+        <img class="nav-logo-mono" src="brand_assets/Logo_Dark.svg" alt="brilliant dyes">
+        <img class="nav-logo-colour" src="brand_assets/Logo_Multicoloured.svg" alt="brilliant dyes">
+      </a>
     </div>
     <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -834,7 +856,7 @@
       <li><a href="science.html">science</a></li>
       <li><a href="#team">team</a></li>
       <li><a href="news.html">news</a></li>
-      <li><a href="#contact" class="btn btn-orange" style="padding: 10px 22px; font-size: 14px;">Collaborate</a></li>
+      <li><a href="#contact" class="btn btn-orange" style="padding: 10px 22px; font-size: 14px; color: #FFFDEC;">Collaborate</a></li>
     </ul>
   </nav>
 
@@ -872,6 +894,8 @@
       <img src="brand_assets/Logos_Sponsors/8b9b2b9614212da0_org%201.png" alt="IBioIC">
       <img src="brand_assets/Logos_Sponsors/Artboard+1@4x.png%201.png" alt="Partner">
       <img src="brand_assets/Logos_Sponsors/logo-white-no-text%201.png" alt="UKRI Innovate UK">
+      <img src="brand_assets/Logos_Sponsors/CommonWealth_Scholarship.png" alt="Commonwealth Scholarship">
+      <img src="brand_assets/Logos_Sponsors/IChemE.png" alt="IChemE">
       <!-- set 2 — duplicate for seamless loop -->
       <img src="brand_assets/Logos_Sponsors/Imperial_College_London_new_logo%201.png" alt="Imperial College London">
       <img src="brand_assets/Logos_Sponsors/rae_logo_black.png%201.png" alt="Royal Academy of Engineering">
@@ -883,6 +907,8 @@
       <img src="brand_assets/Logos_Sponsors/8b9b2b9614212da0_org%201.png" alt="IBioIC">
       <img src="brand_assets/Logos_Sponsors/Artboard+1@4x.png%201.png" alt="Partner">
       <img src="brand_assets/Logos_Sponsors/logo-white-no-text%201.png" alt="UKRI Innovate UK">
+      <img src="brand_assets/Logos_Sponsors/CommonWealth_Scholarship.png" alt="Commonwealth Scholarship">
+      <img src="brand_assets/Logos_Sponsors/IChemE.png" alt="IChemE">
     </div>
   </section>
 
