@@ -55,10 +55,24 @@ const NEWS_ITEMS = [
     imgStyle: ""
   },
   {
+    title:    "Imperial spinout wins H&M Global Change Award",
+    date:     "Jul 2025",
+    url:      "https://www.wtin.com/article/2025/july/21-07-25/imperial-spinout-wins-h-m-global-change-award/?freeviewlinkid=197029",
+    img:      "brand_assets/Content/footage/News/WTIN%20july%202025%20.png",
+    imgStyle: ""
+  },
+  {
     title:    "Our origin story",
     date:     "Jul 2025",
     url:      "https://www.imperial.ac.uk/news/266514/from-bangladeshi-roots-natural-algae-dyes/",
     img:      "brand_assets/Content/footage/News/Our%20origin%20story.png",
+    imgStyle: ""
+  },
+  {
+    title:    "Sustainable dyes being developed at Imperial win H&M Global Change Award",
+    date:     "May 2025",
+    url:      "https://www.imperial.ac.uk/news/264173/sustainable-dyes-being-developed-imperial-hm/",
+    img:      "brand_assets/Content/footage/News/Imperial%20news%20May%202025.png",
     imgStyle: ""
   }
 ];
