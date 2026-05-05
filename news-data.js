@@ -13,6 +13,13 @@ const NEWS_ITEMS = [
     imgStyle: ""
   },
   {
+    title:    "Podcast: Towards Sustainable Fashion",
+    date:     "Apr 2026",
+    url:      "https://open.spotify.com/episode/4vIBGgluY66RfS0QAq9RwX",
+    img:      "brand_assets/Content/footage/News/Podcast_Chem_Eng.png",
+    imgStyle: ""
+  },
+  {
     title:    "Our first screen prints",
     date:     "Mar 2026",
     url:      "https://www.linkedin.com/feed/update/urn:li:activity:7444388279535329280",
@@ -52,6 +59,13 @@ const NEWS_ITEMS = [
     date:     "Sep 2025",
     url:      "https://www.imperial.ac.uk/news/articles/engineering/chemical-engineering/2025/from-lab-to-global-stage-brilliant-dyes-redefine-sustainable-colour/",
     img:      "brand_assets/Content/footage/News/Global%20Change%20Award%202025.png",
+    imgStyle: ""
+  },
+  {
+    title:    "Podcast: Dyed by Nature",
+    date:     "Sep 2025",
+    url:      "https://open.spotify.com/episode/2LZFklXxwg5zfSUPSmKJmD",
+    img:      "brand_assets/Content/footage/News/Podcast_DareToDream.png",
     imgStyle: ""
   },
   {
