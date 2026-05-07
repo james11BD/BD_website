@@ -7,7 +7,7 @@
 const NEWS_ITEMS = [
   {
     title:    "New Research: Bioactive Compounds from Blue-Green Microalgae",
-    date:     "May 2026",
+    date:     "Apr 2026",
     url:      "https://www.linkedin.com/feed/update/urn:li:activity:7446537195936526336",
     img:      "brand_assets/Content/footage/News/Our%20latest%20published%20research.png",
     imgStyle: ""
