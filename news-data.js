@@ -6,6 +6,13 @@
 
 const NEWS_ITEMS = [
   {
+    title:    "Sustainable Fashion Showcase",
+    date:     "Apr 2026",
+    url:      "https://www.imperial.ac.uk/news/articles/2026/uk-will-lead-sustainable-fashion-revolution-predict-industry-experts--/",
+    img:      "brand_assets/Content/footage/News/Sustainable%20Fashion%20Showcase.png",
+    imgStyle: ""
+  },
+  {
     title:    "New Research: Bioactive Compounds from Blue-Green Microalgae",
     date:     "Apr 2026",
     url:      "https://www.linkedin.com/feed/update/urn:li:activity:7446537195936526336",
