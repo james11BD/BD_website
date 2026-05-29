@@ -568,6 +568,30 @@
       margin: 0 auto;
     }
 
+    .team-group-label {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto 28px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dark);
+      white-space: nowrap;
+    }
+    .team-group-label::before,
+    .team-group-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--dark);
+    }
+    .team-grid + .team-group-label {
+      margin-top: 48px;
+    }
+
     .team-card {
       text-align: center;
     }
@@ -1042,6 +1066,7 @@
   <!-- SECTION 7: MEET THE TEAM -->
   <section class="team-section" id="team">
     <h2>Meet the Team</h2>
+    <div class="team-group-label">Founders</div>
     <div class="team-grid">
 
       <!-- 1. Redwan Rahman — CEO & Co-Founder -->
@@ -1133,6 +1158,11 @@
           </a>
         </div>
       </div>
+
+    </div>
+
+    <div class="team-group-label">London Team</div>
+    <div class="team-grid">
 
       <!-- 4. Rosalie Valentiny — Product Design Engineer -->
       <div class="team-card">
@@ -1247,6 +1277,11 @@
           </a>
         </div>
       </div>
+
+    </div>
+
+    <div class="team-group-label">Heriot-Watt University Team</div>
+    <div class="team-grid">
 
       <!-- 9. Danmei Sun — Advisor (Textile) -->
       <div class="team-card">
