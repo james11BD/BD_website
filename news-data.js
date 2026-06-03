@@ -6,6 +6,13 @@
 
 const NEWS_ITEMS = [
   {
+    title:    "Brilliant Dyes Recognition at Imperial Graduation 2026",
+    date:     "Jun 2026",
+    url:      "news-imperial-recognition-2026.html",
+    img:      "brand_assets/Content/footage/News/gradpic%201.JPG",
+    imgStyle: ""
+  },
+  {
     title:    "Sustainable Fashion Showcase",
     date:     "Apr 2026",
     url:      "https://www.imperial.ac.uk/news/articles/2026/uk-will-lead-sustainable-fashion-revolution-predict-industry-experts--/",
