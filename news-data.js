@@ -6,6 +6,13 @@
 
 const NEWS_ITEMS = [
   {
+    title:    "Brilliant Dyes Shortlisted for the EMMA Awards 2026",
+    date:     "Jun 2026",
+    url:      "news-emma-awards-2026.html",
+    img:      "brand_assets/Content/footage/News/EMMA%202026.png",
+    imgStyle: ""
+  },
+  {
     title:    "Brilliant Dyes Recognition at Imperial Graduation 2026",
     date:     "Jun 2026",
     url:      "news-imperial-recognition-2026.html",
