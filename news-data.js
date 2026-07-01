@@ -6,6 +6,13 @@
 
 const NEWS_ITEMS = [
   {
+    title:    "Brilliant Dyes Named Finalist in the Royal Society of Chemistry Emerging Technologies Competition",
+    date:     "Jul 2026",
+    url:      "news-rsc-finalist-2026.html",
+    img:      "brand_assets/Content/footage/News/RCS%20finalist%202026.jpeg",
+    imgStyle: ""
+  },
+  {
     title:    "Brilliant Dyes Shortlisted for the EMMA Awards 2026",
     date:     "Jun 2026",
     url:      "news-emma-awards-2026.html",
