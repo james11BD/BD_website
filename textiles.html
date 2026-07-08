@@ -3,22 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Samples — Brilliant Dyes</title>
+  <title>Textiles — Brilliant Dyes</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --blue: #000EAA;
+      --blue:   #000EAA;
       --orange: #F58C60;
-      --cream: #FFFDEC;
-      --dark: #2D2D2A;
+      --cream:  #FFFDEC;
+      --dark:   #2D2D2A;
     }
 
     body {
@@ -64,19 +60,10 @@
       display: inline-block;
       cursor: pointer;
     }
-    .nav-logo-mono {
-      display: block;
-      height: 44px;
-      width: auto;
-    }
+    .nav-logo-mono { display: block; height: 44px; width: auto; }
     .nav-logo-colour {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: block;
-      opacity: 0;
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%; display: block; opacity: 0;
     }
     .nav-logo-wrap:hover .nav-logo-mono { opacity: 0; }
     .nav-logo-wrap:hover .nav-logo-colour { opacity: 1; }
@@ -87,7 +74,6 @@
       gap: 36px;
       list-style: none;
     }
-
     .nav-links a {
       color: #2D2D2A;
       font-size: 15px;
@@ -102,10 +88,25 @@
       text-decoration-color: rgba(45, 45, 42, 0.45);
     }
 
-    /* ── HERO ── */
-    .hero-wrap {
-      padding: 24px 60px 0;
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
     }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--blue);
+      border-radius: 2px;
+    }
+
+    /* ── HERO ── */
+    .hero-wrap { padding: 24px 60px 0; }
 
     .hero-image-box {
       position: relative;
@@ -114,20 +115,17 @@
       width: 100%;
       aspect-ratio: 16 / 8;
     }
-
     .hero-image-box img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-
     .hero-overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(145deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.10) 55%, transparent 100%);
     }
-
     .hero-label {
       position: absolute;
       top: 36px;
@@ -139,13 +137,13 @@
       letter-spacing: -0.025em;
     }
 
-    /* ── SAMPLES SECTION ── */
-    .samples-section {
+    /* ── GALLERY SECTION ── */
+    .gallery-section {
       padding: 72px 60px 80px;
       text-align: center;
     }
 
-    .samples-heading {
+    .gallery-heading {
       font-size: 36px;
       font-weight: 400;
       color: var(--dark);
@@ -154,69 +152,48 @@
       margin-bottom: 8px;
     }
 
-    .samples-subhead {
+    .gallery-subhead {
       font-size: 15px;
       color: rgba(45, 45, 42, 0.6);
       line-height: 1.7;
       margin-bottom: 48px;
     }
 
-    /* ── COLOUR GRID ── */
-    .colour-grid {
+    /* ── PHOTO GRID ── */
+    .photo-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      max-width: 900px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 1100px;
       margin: 0 auto;
     }
 
-    .sample {
+    .photo-item {
       position: relative;
-      aspect-ratio: 1 / 1;
-      border-radius: 0;
+      aspect-ratio: 4 / 3;
+      border-radius: 12px;
       overflow: hidden;
       cursor: pointer;
-      transition: transform 0.2s ease, opacity 0.2s ease,
-                  box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .sample img {
+    .photo-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
 
-    /* Dim all siblings when any is hovered */
-    .colour-grid:has(.sample:hover) .sample:not(:hover) {
+    .photo-grid:has(.photo-item:hover) .photo-item:not(:hover) {
       opacity: 0.75;
     }
 
-    .sample:hover {
-      transform: scale(1.08);
+    .photo-item:hover {
+      transform: scale(1.03);
       box-shadow:
-        0 8px 24px rgba(0, 0, 0, 0.18),
+        0 12px 32px rgba(0, 0, 0, 0.18),
         0 2px 8px rgba(0, 0, 0, 0.10);
       z-index: 10;
-    }
-
-    .sample-label {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.7), 0 0 12px rgba(0,0,0,0.4);
-      opacity: 0;
-      transition: opacity 0.2s ease;
-    }
-
-    .sample:hover .sample-label {
-      opacity: 1;
     }
 
     /* ── CONTACT SECTION ── */
@@ -248,22 +225,11 @@
       margin-bottom: 10px;
     }
 
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
 
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-    .form-field {
-      display: flex;
-      flex-direction: column;
-    }
+    .form-field { display: flex; flex-direction: column; }
 
     .contact-form input,
     .contact-form textarea {
@@ -275,25 +241,17 @@
       color: var(--cream);
       font-family: 'Poppins', sans-serif;
       font-size: 14px;
-      font-weight: 400;
       outline: none;
       transition: border-color 0.2s ease;
     }
 
     .contact-form input::placeholder,
-    .contact-form textarea::placeholder {
-      color: rgba(255, 253, 236, 0.38);
-    }
+    .contact-form textarea::placeholder { color: rgba(255, 253, 236, 0.38); }
 
     .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: rgba(255, 253, 236, 0.65);
-    }
+    .contact-form textarea:focus { border-color: rgba(255, 253, 236, 0.65); }
 
-    .contact-form textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
+    .contact-form textarea { resize: vertical; min-height: 120px; }
 
     .btn-send {
       align-self: flex-start;
@@ -313,7 +271,7 @@
     .btn-send:hover { opacity: 0.88; transform: translateY(-1px); }
     .btn-send:active { transform: translateY(0); }
 
-    /* ── FOOTER BAR ── */
+    /* ── FOOTER ── */
     .footer-bar {
       background: var(--blue);
       border-top: 1px solid rgba(255, 253, 236, 0.12);
@@ -323,16 +281,8 @@
       gap: 40px;
     }
 
-    .footer-logo {
-      display: flex;
-      align-items: center;
-    }
-
-    .footer-logo img {
-      height: 36px;
-      width: auto;
-      filter: brightness(0) invert(1);
-    }
+    .footer-logo { display: flex; align-items: center; }
+    .footer-logo img { height: 36px; width: auto; filter: brightness(0) invert(1); }
 
     .footer-col-heading {
       font-size: 11px;
@@ -343,33 +293,13 @@
       margin-bottom: 10px;
     }
 
-    .footer-col a,
-    .footer-col p {
+    .footer-col a, .footer-col p {
       font-size: 13px;
       color: rgba(255, 253, 236, 0.65);
       display: block;
       line-height: 1.8;
     }
-
     .footer-col a:hover { color: var(--cream); }
-
-    /* ── HAMBURGER (hidden on desktop) ── */
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 6px;
-      background: none;
-      border: none;
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--blue);
-      border-radius: 2px;
-    }
 
     /* ── MOBILE ── */
     @media (max-width: 768px) {
@@ -389,19 +319,15 @@
         box-shadow: 0 8px 24px rgba(0,0,0,0.08);
       }
       .nav-links.open { display: flex; }
-
       .hero-wrap { padding: 16px 16px 0; }
       .hero-label { font-size: 28px; top: 24px; left: 24px; }
-
-      .samples-section { padding: 48px 20px 60px; }
-      .samples-heading { font-size: 28px; }
-      .colour-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-
+      .gallery-section { padding: 48px 20px 60px; }
+      .gallery-heading { font-size: 28px; }
+      .photo-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
       .contact-section { padding: 60px 20px; }
       .contact-inner { grid-template-columns: 1fr; gap: 36px; }
       .contact-left h2 { font-size: 40px; }
       .form-row { grid-template-columns: 1fr; }
-
       .footer-bar { grid-template-columns: 1fr; padding: 40px 20px; gap: 28px; }
     }
   </style>
@@ -420,8 +346,8 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="samples.html" class="active">samples</a></li>
-      <li><a href="textiles.html">textiles</a></li>
+      <li><a href="samples.html">samples</a></li>
+      <li><a href="textiles.html" class="active">textiles</a></li>
       <li><a href="cosmetics.html">cosmetics</a></li>
       <li><a href="science.html">science</a></li>
       <li><a href="index.html#team">team</a></li>
@@ -433,84 +359,43 @@
   <!-- ── HERO ── -->
   <div class="hero-wrap">
     <div class="hero-image-box">
-      <img src="brand_assets/Content/footage/Samples page/Blue_sample 1.png" alt="Brilliant Dyes colour samples">
+      <img src="brand_assets/Content/footage/with_brilliant_dyes.png" alt="Brilliant Dyes textiles">
       <div class="hero-overlay"></div>
-      <h1 class="hero-label">Our<br>samples</h1>
+      <h1 class="hero-label">Our<br>textiles</h1>
     </div>
   </div>
 
-  <!-- ── SAMPLES GRID ── -->
-  <section class="samples-section">
-    <h2 class="samples-heading">Our colour range</h2>
-    <p class="samples-subhead">dyes tested on silk, cellulose, cotton &amp; wool based fabrics.</p>
+  <!-- ── GALLERY ── -->
+  <section class="gallery-section">
+    <h2 class="gallery-heading">Natural colour for textiles</h2>
+    <p class="gallery-subhead">Sustainable, microalgae-derived dyes applied to silk, cotton, wool and cellulose-based fabrics.</p>
 
-    <div class="colour-grid">
-      <!-- Row 1 -->
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/G007.png" alt="G007"><div class="sample-label">G007</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/G006.png" alt="G006"><div class="sample-label">G006</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/G003.png" alt="G003"><div class="sample-label">G003</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/G004.png" alt="G004"><div class="sample-label">G004</div></div>
-      <!-- Row 2 -->
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/Y007.png" alt="Y007"><div class="sample-label">Y007</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/Y001.png" alt="Y001"><div class="sample-label">Y001</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/Y006.png" alt="Y006"><div class="sample-label">Y006</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/G005.png" alt="G005"><div class="sample-label">G005</div></div>
-      <!-- Row 3 -->
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/Y002.png" alt="Y002"><div class="sample-label">Y002</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/G002.png" alt="G002"><div class="sample-label">G002</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R013.png" alt="R013"><div class="sample-label">R013</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R011.png" alt="R011"><div class="sample-label">R011</div></div>
-      <!-- Row 4 -->
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R004.png" alt="R004"><div class="sample-label">R004</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R005.png" alt="R005"><div class="sample-label">R005</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R007.png" alt="R007"><div class="sample-label">R007</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R008.png" alt="R008"><div class="sample-label">R008</div></div>
-      <!-- Row 5 -->
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R001.png" alt="R001"><div class="sample-label">R001</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R003.png" alt="R003"><div class="sample-label">R003</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R009.png" alt="R009"><div class="sample-label">R009</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R014.png" alt="R014"><div class="sample-label">R014</div></div>
-      <!-- Row 6 -->
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/B006.png" alt="B006"><div class="sample-label">B006</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/B005.png" alt="B005"><div class="sample-label">B005</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/B001.png" alt="B001"><div class="sample-label">B001</div></div>
-      <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/B003.png" alt="B003"><div class="sample-label">B003</div></div>
+    <div class="photo-grid">
+      <div class="photo-item"><img src="brand_assets/Content/footage/with_brilliant_dyes.png"  alt="Fabric with Brilliant Dyes"></div>
+      <div class="photo-item"><img src="brand_assets/Content/footage/DSCF4243%201.png"          alt="Dyed fabric close-up"></div>
+      <div class="photo-item"><img src="brand_assets/Content/footage/IMG_0409%203.png"           alt="Textile sample"></div>
     </div>
   </section>
 
-  <!-- ── CONTACT SECTION ── -->
+  <!-- ── CONTACT ── -->
   <section class="contact-section" id="contact">
     <div class="contact-inner">
-
       <div class="contact-left">
         <h2>Contact Us</h2>
         <p>Interested in working together? Want to request a sample?</p>
         <p>Fill out some info and we will be in touch shortly. We can't wait to hear from you!</p>
       </div>
-
       <form class="contact-form" action="#" method="POST">
         <div>
           <div class="form-row">
-            <div class="form-field">
-              <input type="text" name="first_name" placeholder="First Name (required)" required>
-            </div>
-            <div class="form-field">
-              <input type="text" name="last_name" placeholder="Last Name (required)" required>
-            </div>
+            <div class="form-field"><input type="text" name="first_name" placeholder="First Name (required)" required></div>
+            <div class="form-field"><input type="text" name="last_name" placeholder="Last Name (required)" required></div>
           </div>
         </div>
-
-        <div class="form-field">
-          <input type="email" name="email" placeholder="Email (required)" required>
-        </div>
-
-        <div class="form-field">
-          <textarea name="message" placeholder="Message (required)" rows="5" required></textarea>
-        </div>
-
+        <div class="form-field"><input type="email" name="email" placeholder="Email (required)" required></div>
+        <div class="form-field"><textarea name="message" placeholder="Message (required)" rows="5" required></textarea></div>
         <button type="submit" class="btn-send">Send</button>
       </form>
-
     </div>
   </section>
 
