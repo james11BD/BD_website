@@ -162,39 +162,53 @@
     /* ── PHOTO GRID ── */
     .photo-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      max-width: 1100px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
     .photo-item {
-      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .photo-item:hover { transform: scale(1.02); }
+
+    .photo-img-wrap {
+      width: 100%;
       aspect-ratio: 1 / 1;
       border-radius: 12px;
       overflow: hidden;
-      cursor: pointer;
       background: #fff;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      transition: box-shadow 0.2s ease;
     }
 
-    .photo-item img {
+    .photo-item:hover .photo-img-wrap {
+      box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+    }
+
+    .photo-img-wrap img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       display: block;
     }
 
-    .photo-grid:has(.photo-item:hover) .photo-item:not(:hover) {
-      opacity: 0.75;
+    .photo-caption {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark);
+      letter-spacing: 0.02em;
     }
 
-    .photo-item:hover {
-      transform: scale(1.03);
-      box-shadow:
-        0 12px 32px rgba(0, 0, 0, 0.18),
-        0 2px 8px rgba(0, 0, 0, 0.10);
-      z-index: 10;
+    .photo-grid:has(.photo-item:hover) .photo-item:not(:hover) {
+      opacity: 0.75;
     }
 
     /* ── CONTACT SECTION ── */
@@ -380,10 +394,22 @@
     <p class="gallery-subhead">Vibrant, biodegradable pigments derived from microalgae — beautiful colour without compromise.</p>
 
     <div class="photo-grid">
-      <div class="photo-item"><img src="brand_assets/Content/footage/Cosmetics/BD_blue_cosmetic1.jpeg"  alt="Blue cosmetic"></div>
-      <div class="photo-item"><img src="brand_assets/Content/footage/Cosmetics/BD_red_cosmetic.jpeg"    alt="Red cosmetic"></div>
-      <div class="photo-item"><img src="brand_assets/Content/footage/Cosmetics/BD_green_cosmetic.jpeg"  alt="Green cosmetic"></div>
-      <div class="photo-item"><img src="brand_assets/Content/footage/Cosmetics/BD_orange_cosmetic.jpeg" alt="Orange cosmetic"></div>
+      <div class="photo-item">
+        <div class="photo-img-wrap"><img src="brand_assets/Content/footage/Cosmetics/BD_blue_cosmetic1.jpeg"  alt="Blue cosmetic"></div>
+        <div class="photo-caption">Brilliant Dyes Blue</div>
+      </div>
+      <div class="photo-item">
+        <div class="photo-img-wrap"><img src="brand_assets/Content/footage/Cosmetics/BD_red_cosmetic.jpeg"    alt="Red cosmetic"></div>
+        <div class="photo-caption">Brilliant Dyes Red</div>
+      </div>
+      <div class="photo-item">
+        <div class="photo-img-wrap"><img src="brand_assets/Content/footage/Cosmetics/BD_green_cosmetic.jpeg"  alt="Green cosmetic"></div>
+        <div class="photo-caption">Brilliant Dyes Green</div>
+      </div>
+      <div class="photo-item">
+        <div class="photo-img-wrap"><img src="brand_assets/Content/footage/Cosmetics/BD_orange_cosmetic.jpeg" alt="Orange cosmetic"></div>
+        <div class="photo-caption">Brilliant Dyes Orange</div>
+      </div>
     </div>
   </section>
 
