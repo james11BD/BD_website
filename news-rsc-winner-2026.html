@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brilliant Dyes Wins the RSC Change Makers Spotlight Award 2026 — Brilliant Dyes</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:   #000EAA;
+      --orange: #F58C60;
+      --cream:  #FFFDEC;
+      --dark:   #2D2D2A;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; }
+    h1, h2, h3, h4, h5, h6 { font-weight: 400; }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.2s ease, transform 0.15s ease;
+    }
+    .btn:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+    .btn-orange { background: var(--orange); color: white; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 60px;
+      height: 72px;
+      border-bottom: 1px solid rgba(0, 14, 170, 0.08);
+    }
+
+    .nav-logo-wrap {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .nav-logo-mono  { display: block; height: 44px; width: auto; }
+    .nav-logo-colour {
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%; display: block; opacity: 0;
+    }
+    .nav-logo-wrap:hover .nav-logo-mono   { opacity: 0; }
+    .nav-logo-wrap:hover .nav-logo-colour { opacity: 1; }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 36px; list-style: none;
+    }
+    .nav-links a {
+      color: #2D2D2A; font-size: 15px; font-weight: 500; transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 0.65; }
+
+    .nav-hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--dark); border-radius: 2px;
+    }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero {
+      position: relative;
+      margin: 24px 60px 0;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 16 / 7;
+    }
+    .article-hero img {
+      width: 100%; height: 100%; object-fit: contain; display: block;
+      background: #000;
+    }
+    .article-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(145deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.05) 60%, transparent 100%);
+    }
+    .article-hero-tag {
+      position: absolute;
+      top: 32px; left: 36px;
+      background: var(--orange);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 50px;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+
+    .article-meta {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+
+    .article-title {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      color: var(--dark);
+      margin-bottom: 32px;
+    }
+
+    .article-divider {
+      width: 40px; height: 2px;
+      background: var(--orange);
+      border-radius: 2px;
+      margin-bottom: 32px;
+      opacity: 0.7;
+    }
+
+    .article-body p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.8;
+      color: var(--dark);
+      margin-bottom: 24px;
+    }
+
+    .article-body img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 8px 0 24px;
+      display: block;
+    }
+
+    .article-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 4px;
+      margin-bottom: 32px;
+      padding: 14px 28px;
+      background: var(--blue);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 50px;
+      transition: opacity 0.2s ease, transform 0.15s ease;
+    }
+    .article-cta:hover { opacity: 0.85; transform: translateY(-1px); }
+    .article-cta svg { flex-shrink: 0; }
+
+    .article-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--blue);
+      margin-bottom: 36px;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .article-back:hover { opacity: 1; }
+    .article-back svg { flex-shrink: 0; }
+
+    /* ── FOOTER ── */
+    .footer-bar {
+      background: var(--blue);
+      display: flex;
+      align-items: flex-start;
+      gap: 60px;
+      padding: 48px 60px;
+    }
+    .footer-logo { display: flex; align-items: center; }
+    .footer-logo img { height: 36px; width: auto; filter: brightness(0) invert(1); }
+
+    .footer-col-heading {
+      font-size: 11px; font-weight: 700; color: var(--cream);
+      letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px;
+    }
+    .footer-col p, .footer-col a {
+      font-size: 13px; color: var(--cream); opacity: 0.7;
+      line-height: 1.8; display: block;
+    }
+    .footer-col a:hover { opacity: 1; }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--cream); padding: 20px; border-bottom: 1px solid rgba(0,14,170,0.08); gap: 16px; }
+      .nav-links.open { display: flex; }
+      .nav-hamburger { display: flex; }
+      .article-hero { margin: 16px 20px 0; }
+      .article-wrap { padding: 40px 20px 72px; }
+      .article-title { font-size: 26px; }
+      .footer-bar { flex-direction: column; gap: 32px; padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <div class="nav-logo">
+      <a href="index.html" class="nav-logo-wrap">
+        <img class="nav-logo-mono" src="brand_assets/Logo_Dark.svg" alt="Brilliant Dyes">
+        <img class="nav-logo-colour" src="brand_assets/Logo_Multicoloured.svg" alt="Brilliant Dyes">
+      </a>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="samples.html">samples</a></li>
+      <li><a href="textiles.html">textiles</a></li>
+      <li><a href="science.html">science</a></li>
+      <li><a href="index.html#team">team</a></li>
+      <li><a href="news.html" class="active">news</a></li>
+      <li><a href="index.html#contact" class="btn btn-orange" style="color: #FFFDEC;">Collaborate</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO IMAGE ── -->
+  <div class="article-hero">
+    <img src="brand_assets/Content/footage/News/RSC%20spotlight%20award%20dye%20explosion.png" alt="RSC Change Makers Spotlight Award 2026">
+    <div class="article-hero-overlay"></div>
+    <span class="article-hero-tag">Award</span>
+  </div>
+
+  <!-- ── ARTICLE BODY ── -->
+  <div class="article-wrap">
+
+    <a href="news.html" class="article-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 5l-7 7 7 7"/>
+      </svg>
+      Back to News
+    </a>
+
+    <div class="article-meta">July 2026 &nbsp;·&nbsp; Award</div>
+
+    <h1 class="article-title">Brilliant Dyes Wins the RSC Change Makers Spotlight Award 2026</h1>
+
+    <div class="article-divider"></div>
+
+    <div class="article-body">
+
+      <p>We are incredibly proud to announce that Brilliant Dyes has won the Change Makers Spotlight Award at the Royal Society of Chemistry Emerging Technologies Competition 2026 — the most prestigious recognition across all categories in the competition.</p>
+
+      <p>Nominated in the Environment category, Brilliant Dyes was recognised for two patent-pending technologies: a continuous low-energy, closed-loop natural dyes extraction process, and a sustainable dyes fixation method using green chemicals. Together, these innovations reduce energy consumption by over 80%, cut water pollution in textile dyeing by 90%, and lower costs by 50% compared to other natural dye solutions.</p>
+
+      <p>The Change Makers Spotlight Award is awarded to the entry judged to have the greatest potential to drive meaningful, positive change — and we are honoured to be chosen from an outstanding field of innovators across all categories. This recognition is a testament to the hard work of our entire team and our shared commitment to transforming one of the world's most polluting industries.</p>
+
+      <a href="https://changemakers.rsc.org/rsc-site/content/Emerging-Technologies-Competition/Our-winners.aspx" class="article-cta" target="_blank" rel="noopener">
+        View the full winners list on the RSC website
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+      </a>
+
+      <img src="brand_assets/Content/footage/News/RSC%20ICL%20awards.jpeg" alt="Brilliant Dyes team at the RSC Emerging Technologies Competition 2026">
+
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer-bar">
+    <div class="footer-logo">
+      <img src="brand_assets/Logo_Dark.svg" alt="Brilliant Dyes">
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-heading">Location</div>
+      <p>Imperial College London</p>
+      <p>Exhibition Road</p>
+      <p>London, SW7 2AZ</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-heading">Contact</div>
+      <a href="mailto:hello@brilliantdyes.com?cc=redwan@brilliantdyes.com,tabish@brilliantdyes.com">hello@brilliantdyes.com</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navHamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
