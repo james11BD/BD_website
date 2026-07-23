@@ -6,7 +6,7 @@
 
 const NEWS_ITEMS = [
   {
-    title:    "Brilliant Dyes Wins the RSC Change Makers Spotlight Award 2026",
+    title:    "Brilliant Dyes Wins the Royal Society of Chemistry Change Makers Spotlight Award 2026",
     date:     "Jul 2026",
     url:      "https://changemakers.rsc.org/rsc-site/content/Emerging-Technologies-Competition/Our-winners.aspx",
     img:      "brand_assets/Content/footage/News/RSC%20spotlight%20award%20plain.png",
