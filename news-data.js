@@ -6,6 +6,13 @@
 
 const NEWS_ITEMS = [
   {
+    title:    "Brilliant Dyes Featured in WTiN Innovation Outlook H2 2026",
+    date:     "Aug 2026",
+    url:      "news-wtin-2026.html",
+    img:      "brand_assets/Content/footage/News/WTiN%20cover%20Aug%202026.jpeg",
+    imgStyle: ""
+  },
+  {
     title:    "Imperial College London Celebrates Brilliant Dyes' RSC Award Win",
     date:     "Aug 2026",
     url:      "news-imperial-rsc-2026.html",
