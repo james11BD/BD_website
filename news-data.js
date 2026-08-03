@@ -6,6 +6,13 @@
 
 const NEWS_ITEMS = [
   {
+    title:    "Imperial College London Celebrates Brilliant Dyes' RSC Award Win",
+    date:     "Aug 2026",
+    url:      "news-imperial-rsc-2026.html",
+    img:      "brand_assets/Content/footage/News/RSC%20ICL%20awards.jpeg",
+    imgStyle: ""
+  },
+  {
     title:    "Brilliant Dyes Wins the Royal Society of Chemistry Change Makers Spotlight Award 2026",
     date:     "Jul 2026",
     url:      "https://changemakers.rsc.org/rsc-site/content/Emerging-Technologies-Competition/Our-winners.aspx",
