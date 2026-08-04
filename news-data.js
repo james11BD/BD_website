@@ -8,8 +8,8 @@ const NEWS_ITEMS = [
   {
     title:    "We've been featured in WTiN's latest Innovation Outlook",
     date:     "Aug 2026",
-    url:      "news-wtin-2026.html",
-    img:      "brand_assets/Content/footage/News/WTiN%20cover%20Aug%202026.jpeg",
+    url:      "brand_assets/Content/footage/News/WTiN%20Innovation%20Outlook%20Dyeing%20and%20Finishing%202026.pdf",
+    img:      "brand_assets/Content/footage/News/BD%204%20colours%20textiles.jpeg",
     imgStyle: ""
   },
   {
