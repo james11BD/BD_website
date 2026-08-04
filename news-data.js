@@ -6,7 +6,7 @@
 
 const NEWS_ITEMS = [
   {
-    title:    "Brilliant Dyes Featured in WTiN Innovation Outlook H2 2026",
+    title:    "We've been featured in WTiN's latest Innovation Outlook",
     date:     "Aug 2026",
     url:      "news-wtin-2026.html",
     img:      "brand_assets/Content/footage/News/WTiN%20cover%20Aug%202026.jpeg",
