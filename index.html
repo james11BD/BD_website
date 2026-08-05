@@ -1342,7 +1342,7 @@
       </div>
 
       <!-- Right: form -->
-      <form class="contact-form" action="https://formspree.io/f/xaewyepd" method="POST">
+      <form class="contact-form" id="contactForm">
         <div>
           <div class="form-row">
             <div class="form-field">
@@ -1362,7 +1362,9 @@
           <textarea name="message" placeholder="Message (required)" rows="5" required></textarea>
         </div>
 
-        <button type="submit" class="btn-send">Send</button>
+        <button type="submit" class="btn-send" id="contactSubmit">Send</button>
+        <p id="contactSuccess" style="display:none;margin-top:16px;font-size:15px;font-weight:500;color:#000EAA;">Thanks — we'll be in touch shortly.</p>
+        <p id="contactError" style="display:none;margin-top:16px;font-size:15px;font-weight:500;color:#c0392b;">Something went wrong. Please email us directly at hello@brilliantdyes.com</p>
       </form>
 
     </div>
@@ -1408,6 +1410,35 @@
     const navLinks = document.getElementById('navLinks');
     navHamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  </script>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('contactSubmit');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      try {
+        const res = await fetch('https://formspree.io/f/xaewyepd', {
+          method: 'POST',
+          body: new FormData(this),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          this.reset();
+          btn.style.display = 'none';
+          document.getElementById('contactSuccess').style.display = 'block';
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Send';
+          document.getElementById('contactError').style.display = 'block';
+        }
+      } catch {
+        btn.disabled = false;
+        btn.textContent = 'Send';
+        document.getElementById('contactError').style.display = 'block';
+      }
+    });
   </script>
 </body>
 </html>
