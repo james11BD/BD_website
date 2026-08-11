@@ -1108,12 +1108,7 @@
   <!-- ── SECTION: VIDEO ── -->
   <section class="video-section">
     <h2 class="video-heading">Want to learn more?</h2>
-    <div class="video-container">
-      <iframe id="ytPlayer"
-        src="https://www.youtube.com/embed/zlzncyCboCo?rel=0&modestbranding=1&enablejsapi=1&showinfo=0&iv_load_policy=3"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+    <div class="video-container" id="videoContainer">
       <div class="video-poster" id="videoPoster">
         <img src="brand_assets/Content/footage/BD_logo.jpeg" alt="Brilliant Dyes — play video">
         <div class="video-poster-play">
@@ -1496,11 +1491,7 @@
   <script>
     var ytPlayer;
     var ytPlayer;
-    function onYouTubeIframeAPIReady() {
-      ytPlayer = new YT.Player('ytPlayer', {
-        events: { onStateChange: onYTStateChange }
-      });
-    }
+    function onYouTubeIframeAPIReady() { /* player created on poster click */ }
     function onYTStateChange(event) {
       if (event.data === YT.PlayerState.ENDED) {
         document.getElementById('videoEndOverlay').classList.add('active');
@@ -1508,7 +1499,17 @@
     }
     document.getElementById('videoPoster').addEventListener('click', function() {
       this.style.display = 'none';
-      ytPlayer.playVideo();
+      var iframe = document.createElement('iframe');
+      iframe.id = 'ytPlayerIframe';
+      iframe.src = 'https://www.youtube.com/embed/zlzncyCboCo?rel=0&modestbranding=1&autoplay=1&showinfo=0&iv_load_policy=3&enablejsapi=1';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0;';
+      var container = document.getElementById('videoContainer');
+      container.insertBefore(iframe, container.firstChild);
+      ytPlayer = new YT.Player('ytPlayerIframe', {
+        events: { onStateChange: onYTStateChange }
+      });
     });
     document.getElementById('videoReplayBtn').addEventListener('click', function() {
       document.getElementById('videoEndOverlay').classList.remove('active');
