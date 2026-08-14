@@ -322,87 +322,6 @@
       line-height: 1.1;
     }
 
-    /* ── VIDEO SECTION ── */
-    .video-section {
-      padding: 0 60px 96px;
-    }
-    .video-heading {
-      font-size: 68px;
-      font-weight: 400;
-      color: var(--dark);
-      letter-spacing: -0.03em;
-      text-align: left;
-      margin-bottom: 52px;
-      line-height: 1.1;
-    }
-    .video-container {
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      aspect-ratio: 16 / 9;
-    }
-    .video-container iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      border: 0;
-    }
-    .video-end-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.72);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      border-radius: 20px;
-    }
-    .video-end-overlay.active { display: flex; }
-    .video-poster {
-      position: absolute;
-      inset: 0;
-      z-index: 3;
-      cursor: pointer;
-    }
-    .video-poster img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .video-poster-play {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(0,0,0,0.25);
-      transition: background 0.2s;
-    }
-    .video-poster:hover .video-poster-play { background: rgba(0,0,0,0.38); }
-    .video-poster-circle {
-      width: 72px; height: 72px;
-      border-radius: 50%;
-      background: var(--orange);
-      display: flex; align-items: center; justify-content: center;
-      transition: transform 0.15s ease;
-    }
-    .video-poster:hover .video-poster-circle { transform: scale(1.08); }
-    .video-replay-btn {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--orange);
-      color: #fff;
-      border: none;
-      border-radius: 50px;
-      padding: 16px 36px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 16px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: opacity 0.2s ease, transform 0.15s ease;
-    }
-    .video-replay-btn:hover { opacity: 0.88; transform: translateY(-1px); }
-
     .slider-wrap {
       position: relative;
       border-radius: 20px;
@@ -939,8 +858,7 @@
       .planet-section { padding: 0 20px 60px; }
       .planet-heading { font-size: 44px; }
       .slider-wrap { aspect-ratio: 4 / 3; }
-      .video-section { padding: 0 20px 60px; }
-      .video-heading { font-size: 44px; }
+
 
       .dyes-section { padding: 60px 20px; }
       .dyes-heading { font-size: 44px; }
@@ -1101,31 +1019,6 @@
                   stroke="#2D2D2A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── SECTION: VIDEO ── -->
-  <section class="video-section">
-    <h2 class="video-heading">Want to learn more?</h2>
-    <div class="video-container" id="videoContainer">
-      <div class="video-poster" id="videoPoster">
-        <img src="brand_assets/Content/footage/News/BD%204%20colours%20textiles.jpeg" alt="Brilliant Dyes — play video">
-        <div class="video-poster-play">
-          <div class="video-poster-circle">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="white" stroke="none">
-              <polygon points="6 3 20 12 6 21 6 3"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div class="video-end-overlay" id="videoEndOverlay">
-        <button class="video-replay-btn" id="videoReplayBtn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="5 3 19 12 5 21 5 3"/>
-          </svg>
-          Play Again
-        </button>
       </div>
     </div>
   </section>
@@ -1486,38 +1379,6 @@
     });
   </script>
 
-  <!-- YouTube IFrame API -->
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script>
-    var ytPlayer;
-    var ytPlayer;
-    function onYouTubeIframeAPIReady() { /* player created on poster click */ }
-    function onYTStateChange(event) {
-      if (event.data === YT.PlayerState.ENDED) {
-        document.getElementById('videoEndOverlay').classList.add('active');
-      }
-    }
-    document.getElementById('videoPoster').addEventListener('click', function() {
-      this.style.display = 'none';
-      var iframe = document.createElement('iframe');
-      iframe.id = 'ytPlayerIframe';
-      iframe.src = 'https://www.youtube.com/embed/zlzncyCboCo?rel=0&modestbranding=1&autoplay=1&showinfo=0&iv_load_policy=3&enablejsapi=1';
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-      iframe.allowFullscreen = true;
-      iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0;';
-      var container = document.getElementById('videoContainer');
-      container.insertBefore(iframe, container.firstChild);
-      ytPlayer = new YT.Player('ytPlayerIframe', {
-        events: { onStateChange: onYTStateChange }
-      });
-    });
-    document.getElementById('videoReplayBtn').addEventListener('click', function() {
-      document.getElementById('videoEndOverlay').classList.remove('active');
-      ytPlayer.seekTo(0);
-      ytPlayer.playVideo();
-    });
-  </script>
-
   <script>
     // ── Image Comparison Slider ──
     const sliderWrap    = document.getElementById('sliderWrap');
@@ -1614,6 +1475,7 @@
           <circle cx="4" cy="4" r="2"/>
         </svg>
       </a>
+      <p class="footer-legal" style="margin-top:10px;">&copy; 2026 Brilliant Dyes Ltd</p>
     </div>
   </footer>
 
