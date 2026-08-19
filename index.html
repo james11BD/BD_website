@@ -409,76 +409,6 @@
       transform: scale(1.1);
     }
 
-    /* ── VIDEO SECTION ── */
-    .video-section {
-      padding: 0 60px 96px;
-    }
-
-    .video-section-heading {
-      font-size: 68px;
-      font-weight: 400;
-      color: var(--dark);
-      letter-spacing: -0.03em;
-      text-align: left;
-      margin-bottom: 52px;
-      line-height: 1.1;
-    }
-
-    .video-player-wrap {
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      aspect-ratio: 16 / 9;
-      cursor: pointer;
-      background: #000;
-    }
-
-    .video-poster {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: opacity 0.3s ease;
-    }
-
-    .video-play-overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(0, 0, 0, 0.22);
-      transition: background 0.2s ease;
-    }
-    .video-player-wrap:hover .video-play-overlay {
-      background: rgba(0, 0, 0, 0.36);
-    }
-
-    .video-play-circle {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-    .video-player-wrap:hover .video-play-circle {
-      transform: scale(1.1);
-    }
-
-    .video-player-wrap iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
     /* ── DYES SECTION ── */
     .dyes-section {
       background: var(--cream);
@@ -930,10 +860,7 @@
       .slider-wrap { aspect-ratio: 4 / 3; }
 
 
-      .video-section { padding: 0 20px 60px; }
-      .video-section-heading { font-size: 44px; }
-      .video-play-circle { width: 64px; height: 64px; }
-      .dyes-section { padding: 60px 20px; }
+.dyes-section { padding: 60px 20px; }
       .dyes-heading { font-size: 44px; }
       .dyes-features { grid-template-columns: 1fr; gap: 32px; }
       .dye-feature .big-number { font-size: 52px; }
@@ -1091,21 +1018,6 @@
           <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
             <path d="M6 7H14M2 7L6 3M2 7L6 11M14 3L18 7M14 11L18 7"
                   stroke="#2D2D2A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── VIDEO SECTION ── -->
-  <section class="video-section">
-    <h2 class="video-section-heading">Want to learn more?</h2>
-    <div class="video-player-wrap" id="videoWrap">
-      <img class="video-poster" src="brand_assets/Content/footage/Founders%20pic.jpeg" alt="Brilliant Dyes team">
-      <div class="video-play-overlay" id="videoPlayOverlay">
-        <div class="video-play-circle">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--blue)" style="margin-left:4px;" aria-hidden="true">
-            <polygon points="5,3 19,12 5,21"/>
           </svg>
         </div>
       </div>
@@ -1567,13 +1479,6 @@
       <p class="footer-legal" style="margin-top:10px;">&copy; 2026 Brilliant Dyes Ltd</p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('videoPlayOverlay').addEventListener('click', function() {
-      const wrap = document.getElementById('videoWrap');
-      wrap.innerHTML = '<iframe src="https://www.youtube.com/embed/5Gd20Rsr8EU?autoplay=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
-    });
-  </script>
 
   <script src="news-data.js"></script>
   <script>
