@@ -188,6 +188,63 @@
       opacity: 0.75;
     }
 
+    /* ── COLOUR RANGE ── */
+    .colour-range-section {
+      padding: 56px 60px 0;
+      text-align: center;
+    }
+    .colour-range-heading {
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--dark);
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .colour-range-subhead {
+      font-size: 15px;
+      color: rgba(45, 45, 42, 0.6);
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+    .colour-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .sample {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 0;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+    }
+    .sample img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .colour-grid:has(.sample:hover) .sample:not(:hover) { opacity: 0.75; }
+    .sample:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
+      z-index: 10;
+    }
+    .sample-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.7), 0 0 12px rgba(0,0,0,0.4);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    .sample:hover .sample-label { opacity: 1; }
+
     .featured-image {
       max-width: 1100px;
       margin: 40px auto 0;
@@ -338,6 +395,9 @@
       .gallery-section { padding: 48px 20px 60px; }
       .gallery-heading { font-size: 28px; }
       .photo-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .colour-range-section { padding: 40px 20px 0; }
+      .colour-range-heading { font-size: 28px; }
+      .colour-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
       .contact-section { padding: 60px 20px; }
       .contact-inner { grid-template-columns: 1fr; gap: 36px; }
       .contact-left h2 { font-size: 40px; }
@@ -387,6 +447,37 @@
       <div class="photo-item"><img src="brand_assets/Content/footage/DSCF4243%201.png"                                alt="Dyed fabric close-up"></div>
       <div class="photo-item"><img src="brand_assets/Content/footage/Textiles/Colour_Swatches.png"                    alt="Brilliant Dyes colour swatches"></div>
       <div class="photo-item"><img src="brand_assets/Content/footage/Textiles/Logo_different_colours%20(1).png"       alt="Brilliant Dyes logo in different colours"></div>
+    </div>
+
+    <div class="colour-range-section">
+      <h2 class="colour-range-heading">Our colour range</h2>
+      <p class="colour-range-subhead">dyes tested on silk, cellulose, cotton &amp; wool based fabrics.</p>
+      <div class="colour-grid">
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/G007.png" alt="G007"><div class="sample-label">G007</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/G006.png" alt="G006"><div class="sample-label">G006</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/G003.png" alt="G003"><div class="sample-label">G003</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/G004.png" alt="G004"><div class="sample-label">G004</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/Y007.png" alt="Y007"><div class="sample-label">Y007</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/Y001.png" alt="Y001"><div class="sample-label">Y001</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/Y006.png" alt="Y006"><div class="sample-label">Y006</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/G005.png" alt="G005"><div class="sample-label">G005</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/Y002.png" alt="Y002"><div class="sample-label">Y002</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/G002.png" alt="G002"><div class="sample-label">G002</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R013.png" alt="R013"><div class="sample-label">R013</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R011.png" alt="R011"><div class="sample-label">R011</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R004.png" alt="R004"><div class="sample-label">R004</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R005.png" alt="R005"><div class="sample-label">R005</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R007.png" alt="R007"><div class="sample-label">R007</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R008.png" alt="R008"><div class="sample-label">R008</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R001.png" alt="R001"><div class="sample-label">R001</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R003.png" alt="R003"><div class="sample-label">R003</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R009.png" alt="R009"><div class="sample-label">R009</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/R014.png" alt="R014"><div class="sample-label">R014</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/B006.png" alt="B006"><div class="sample-label">B006</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/B005.png" alt="B005"><div class="sample-label">B005</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/B001.png" alt="B001"><div class="sample-label">B001</div></div>
+        <div class="sample"><img src="brand_assets/Content/footage/Samples page/Colour_book_individual/B003.png" alt="B003"><div class="sample-label">B003</div></div>
+      </div>
     </div>
 
     <div class="featured-image">
