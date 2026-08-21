@@ -1,0 +1,56 @@
+<svg viewBox="0 0 620 780" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#93D6D3"/>
+    </marker>
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E8B923"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF9D6F"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect width="620" height="780" fill="#FFFDEC"/>
+
+  <!-- ===== main vertical flow ===== -->
+  <!-- Algae Biomass (green outline) -->
+  <rect x="220" y="67" width="180" height="76" rx="12" fill="#FFFDEC" stroke="#93D6D3" stroke-width="2.5"/>
+  <text x="310" y="99" fill="#93D6D3" font-size="16" font-weight="700" text-anchor="middle">Algae</text>
+  <text x="310" y="121" fill="#93D6D3" font-size="16" font-weight="700" text-anchor="middle">Biomass</text>
+
+  <!-- Extraction (gold outline + text) -->
+  <rect x="220" y="322" width="180" height="76" rx="12" fill="#FFFDEC" stroke="#E8B923" stroke-width="2.5"/>
+  <text x="310" y="366" fill="#E8B923" font-size="16" font-weight="700" text-anchor="middle">Extraction</text>
+
+  <!-- Colour Ingredients (blue outline) -->
+  <rect x="210" y="650" width="200" height="80" rx="12" fill="#FFFDEC" stroke="#0079FF" stroke-width="2.5"/>
+  <text x="310" y="684" fill="#0079FF" font-size="16" font-weight="700" text-anchor="middle">Colour</text>
+  <text x="310" y="706" fill="#0079FF" font-size="16" font-weight="700" text-anchor="middle">Ingredients</text>
+
+  <!-- main connectors: first green, second gold -->
+  <line x1="310" y1="143" x2="310" y2="314" stroke="#93D6D3" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <line x1="310" y1="398" x2="310" y2="642" stroke="#E8B923" stroke-width="2.5" marker-end="url(#arrowGold)"/>
+
+  <!-- ===== squiggly by-product branches off Extraction ===== -->
+  <!-- left squiggle -> Human Food -->
+  <path d="M220,375
+           C185,398 255,412 195,437
+           C135,462 205,472 150,494"
+        fill="none" stroke="#FF9D6F" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrowRed)"/>
+
+  <!-- right squiggle -> Pet Food -->
+  <path d="M400,375
+           C435,398 365,412 425,437
+           C485,462 415,472 470,494"
+        fill="none" stroke="#FF9D6F" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrowRed)"/>
+
+  <!-- Human Food (red outline) -->
+  <rect x="25" y="497" width="150" height="62" rx="12" fill="#FFFDEC" stroke="#FF9D6F" stroke-width="2.5"/>
+  <text x="100" y="534" fill="#FF9D6F" font-size="15" font-weight="700" text-anchor="middle">Human Food</text>
+
+  <!-- Pet Food (red outline) -->
+  <rect x="445" y="497" width="150" height="62" rx="12" fill="#FFFDEC" stroke="#FF9D6F" stroke-width="2.5"/>
+  <text x="520" y="534" fill="#FF9D6F" font-size="15" font-weight="700" text-anchor="middle">Pet Food</text>
+</svg>
