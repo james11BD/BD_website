@@ -13,6 +13,13 @@ const NEWS_ITEMS = [
     imgStyle: "object-fit:contain;background:#fff;"
   },
   {
+    title:    "Brilliant Gummies™ Come to Life and On Display",
+    date:     "Sep 2026",
+    url:      "news-food-event-2026.html",
+    img:      "brand_assets/Content/footage/Food/Three%20BD%20sweets.jpeg",
+    imgStyle: ""
+  },
+  {
     title:    "We've been featured in WTiN's latest Innovation Outlook",
     date:     "Aug 2026",
     url:      "brand_assets/Content/footage/News/WTiN%20Innovation%20Outlook%20Dyeing%20and%20Finishing%202026.pdf",
