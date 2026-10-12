@@ -13,7 +13,7 @@ const NEWS_ITEMS = [
     imgStyle: "object-fit:contain;background:#fff;"
   },
   {
-    title:    "Brilliant Gummies™ Come to Life and On Display",
+    title:    "Brilliant Gummies™ Comes to Life and On Display",
     date:     "Sep 2026",
     url:      "news-food-event-2026.html",
     img:      "brand_assets/Content/footage/Food/Three%20BD%20sweets.jpeg",
