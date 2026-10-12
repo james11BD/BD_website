@@ -6,6 +6,13 @@
 
 const NEWS_ITEMS = [
   {
+    title:    "Brilliant Dyes Shortlisted for the IChemE Global Awards 2026 — Two Years Running",
+    date:     "Oct 2026",
+    url:      "news-icheme-finalist-2026.html",
+    img:      "brand_assets/Content/footage/News/ICHEME%20Global%20Awards%20Finalist%202026.jpg",
+    imgStyle: "object-fit:contain;background:#fff;"
+  },
+  {
     title:    "We've been featured in WTiN's latest Innovation Outlook",
     date:     "Aug 2026",
     url:      "brand_assets/Content/footage/News/WTiN%20Innovation%20Outlook%20Dyeing%20and%20Finishing%202026.pdf",
