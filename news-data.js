@@ -6,6 +6,13 @@
 
 const NEWS_ITEMS = [
   {
+    title:    "We're Hiring: Commercial Lead at Brilliant Dyes",
+    date:     "Oct 2026",
+    url:      "news-commercial-lead-2026.html",
+    img:      "brand_assets/Content/footage/News/Commercial%20Lead%20advertisement%20linkedin.png",
+    imgStyle: ""
+  },
+  {
     title:    "Brilliant Dyes Shortlisted for the IChemE Global Awards 2026 — Two Years Running",
     date:     "Oct 2026",
     url:      "news-icheme-finalist-2026.html",
