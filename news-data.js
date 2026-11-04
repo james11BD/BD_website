@@ -6,6 +6,13 @@
 
 const NEWS_ITEMS = [
   {
+    title:    "Greener Dyes of Every Colour for Fabric and Food — Chemistry World",
+    date:     "Nov 2026",
+    url:      "https://www.chemistryworld.com/news/greener-dyes-of-every-colour-for-fabric-and-food/4024429.article",
+    img:      "brand_assets/Content/footage/News/RSC%20spotlight%20award%20dye%20explosion.png",
+    imgStyle: ""
+  },
+  {
     title:    "We're Hiring: Commercial Lead at Brilliant Dyes",
     date:     "Oct 2026",
     url:      "news-commercial-lead-2026.html",
